@@ -7,9 +7,13 @@ const Names = async() => {
   return ( 
     <h1> 
       {shuffledData.map((item, index) => ( 
-        <span key={index}>{item} ⇒ </span> 
+        <span key={index}>
+          {item}
+          {index < shuffledData.length - 1 && ' ⇒ '}
+        </span> 
       ))} 
-    </h1> ); 
+    </h1> 
+  ); 
 };
 
 export default function Home() {
