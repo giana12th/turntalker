@@ -6,7 +6,7 @@ const teams: Team[] = [
 ];
 
 /**
- * 指定したURLから文字列の配列を取得する関数
+ * 指定したURLからチームを取得する
  * @returns 文字列の配列
  */
 export async function fetchTeams(): Promise<Team[]> {
@@ -22,7 +22,7 @@ export async function fetchTeams(): Promise<Team[]> {
         const data: Team[] = await response.json();
         return data;
     } catch (error) {
-        console.error('Error fetching name:', error);
+        console.error('Error fetching teams:', error);
         return teams;
     }
 }
